@@ -1,0 +1,3 @@
+ax = plt.gca()  
+yticks = ax.yaxis.get_major_ticks()
+yticks[0].set_visible(False)
