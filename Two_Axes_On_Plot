@@ -1,0 +1,36 @@
+import matplotlib.pyplot as plt
+
+
+fig, ax1 = plt.subplots()
+
+
+ax1.set_xlabel('time (s)')
+ax1.set_ylabel('exp')
+ax1.plot(x_ir,y_ir, color = 'black', linewidth = 0.9)
+ax1.plot(x_ir_g,y_ir_g, linestyle = ':', color = 'red', linewidth = 1)
+ax1.tick_params(axis='y')
+ax1.set_ylim([-0.8,1.2])
+
+ax = plt.gca()  
+yticks = ax.yaxis.get_major_ticks()
+yticks[0].set_visible(False)
+yticks[1].set_visible(False)
+yticks[2].set_visible(False)
+#yticks[3].set_visible(False)
+
+
+ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
+
+ax2.set_ylabel('sin', )  # we already handled the x-label with ax1
+ax2.tick_params(axis='y',)
+ax2.set_ylim([-100,4000])
+ax2.plot(x_ra,y_ra, color = 'black', linewidth = 0.9)
+ax2.plot(x_ra_g,y_ra_g, linestyle = ':', color = 'red', linewidth = 1)
+
+fig.tight_layout()  # otherwise the right y-label is slightly clipped
+plt.show()
+
+
+#plt.plot(x[peaks], y[peaks], "x")
+#print([x[peaks], y[peaks])
+plt.show()
