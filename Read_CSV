@@ -1,0 +1,7 @@
+data_path = "cr.csv"
+if not os.path.isfile(data_path):
+   print('uh oh')
+else:
+    data = np.genfromtxt(data_path, dtype=float , delimiter=",", encoding='utf-8' ,autostrip=True)
+
+# skip_header=1 is also a common addition to this.
