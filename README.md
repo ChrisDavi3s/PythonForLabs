@@ -1,5 +1,7 @@
 # PythonForLabs
 Usefull snippets for python data analysis with an included example of work submitted.
 
-1) Refers to a d
+Please see the attached pdf.
+
+Other code snippets are just for reference when writing reports :)
 
